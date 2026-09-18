@@ -1,0 +1,3 @@
+The Key word is FALNTR as the shift array is [5, 0, 12, 14, 20, 18]. Each number in the arry corresponds to a number in the alphabet, starting from 0 = A. So 0 = A, 5 = F and so forth.
+We change each number in the array and check the line that corresponds to that number in the cipher text, and watch for the frequency of E and T, as they are the most common letters in the alphabet.
+

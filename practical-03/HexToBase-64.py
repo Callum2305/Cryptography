@@ -6,3 +6,25 @@ i ="42617365363420697320776964656C79207573656420666F722073656E64696E6720652D6D61
 bytes = bytes.fromhex(i)
 
 print(base64.b64encode(bytes).decode())
+
+print("The below is another method: ")
+
+#All attachements in email are encoded in base64! 
+
+# first convert to bytes:
+x = bytes.fromhex(i)
+
+# bytes to base64:
+
+y = base64.b64encode(x)
+
+print(y)
+
+# above kind of works, but there is: b' attached to the beginning of the string. Both options have an = sign for padding at the end.
+# the b' part is python guessing it is a base64 string, python doesnt know for sure its base64.
+
+# to fix,
+print("To remove the b' part: ")
+
+z = y.decode("ascii")
+print(z)
